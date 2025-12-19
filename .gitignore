@@ -40,5 +40,5 @@
 # debug information files
 *.dwo
 
-# Json file
+# vscode setting file
 .vscode/
