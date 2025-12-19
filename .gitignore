@@ -42,3 +42,14 @@
 
 # vscode setting file
 .vscode/
+
+# Mac OS Build junk
+*.dSYM/
+*.plist
+.DS_Store
+
+# Executables (이름이 특정된 경우)
+EAZY_PEASY_LEMON_SQUEEZE
+dummy
+dummy2
+dummy3
