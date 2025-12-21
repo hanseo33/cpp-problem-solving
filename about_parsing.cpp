@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <deque>
 
 using namespace std;
 
@@ -51,4 +52,27 @@ int calculate_sum(const string& s) {
         sum += stoi(number_str);
     }
     return sum;
+}
+/*
+    [1,2,3,4] 이런식으로 입력이 들어온경우
+*/
+void Ex() {
+    int n;
+    cin >> n;
+
+    deque<int> arr;
+
+        char c;
+        cin >> c;
+
+        for(int i = 0; i < n; i++) {
+            int num;
+            cin >> num;
+            arr.emplace_back(num);
+            cin >> c;
+        }
+
+        if(n == 0) {
+            cin >> c;
+        }
 }
