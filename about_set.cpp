@@ -100,3 +100,42 @@ int main() {
 
     return 0;
 }
+
+// 이중우선순위큐를 multiset으로 푸는 문제
+#include <iostream>
+#include <set>
+
+using namespace std;
+
+int main() {
+    int k;
+    cin >> k;
+
+    multiset<int> ms;
+
+    for(int i = 0; i < k; i++) {
+        char c;
+        int x;
+        cin >> c >> x;
+
+        if(c == 'I') {
+            ms.insert(x);
+        } else {
+            if(ms.empty()) continue;
+
+            if(x == 1) {
+                ms.erase(prev(ms.end())); // end iterator 하나 전 거를 지우겠다.
+            } else{
+                ms.erase(ms.begin());
+            }
+        }
+    }
+
+    if(ms.empty()) {
+        cout << "EMPTY\n";
+    } else {
+        cout << *prev(ms.end()) << " " << *ms.begin() << '\n'; // *로 주소안에 있는 값을 출력.
+    }
+    
+    return 0;
+}
